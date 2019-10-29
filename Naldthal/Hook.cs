@@ -76,7 +76,7 @@ namespace Naldthal
             {
                 try
                 {
-                    var itemId = Marshal.ReadInt32(self, 300);
+                    var itemId = Marshal.ReadInt32(self, 304);
                     bool isHq = false, isCollectible = false;
 
                     if (itemId > 1000000)
@@ -238,12 +238,11 @@ namespace Naldthal
                             }
                         }
 
-#if DEBUG
+                        // fot debug
                         ms.WriteColoredString($"> ID: {itemId}", Color.Debug);
                         ms.WriteByte(0xA);
                         ms.WriteColoredString($"> HQ: {isHq}, Cltb: {isCollectible}", Color.Debug);
                         ms.WriteByte(0xA);
-#endif
 
                         if (ms.Length > 0)
                         {

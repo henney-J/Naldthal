@@ -16,7 +16,7 @@ namespace NaldthalInjector
 {
     internal static class Program
     {
-        private const string Version = "v20181104.2";
+        private const string Version = "v20191029.1";
         private static readonly Bridge Bridge = new Bridge();
         private static Mutex _mutex;
 
